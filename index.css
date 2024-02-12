@@ -1,0 +1,407 @@
+body {
+    font-family:Arial, Helvetica, sans-serif;
+    margin: 0px;
+}
+.logo{
+    width: 100px;
+    height: auto;
+}
+ul.menu {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-content: center;
+    justify-content: space-around;
+    align-items: center;
+    list-style: none;
+}
+.menu li a {
+    text-decoration: none;
+    color: #FFFFFF;
+    padding: 10px 20px;
+}
+.menu li a:hover {
+    background-color: #a54656;
+    
+}
+header.barramenu {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-content: center;
+    justify-content: space-evenly;
+    align-items: center;
+    background-color: #465964;
+}
+.container {
+    width: 30%;
+    text-align: center;
+}
+nav {
+    width: 70%;
+}
+div#titular {
+    background-image: url("fotoprincipal.jpg");
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 650px;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-content: center;
+    align-items: center;
+    justify-content: flex-start;
+    color: white;
+    padding: 0px 51px 0px 0px;
+}
+#titular h3 {
+    font-size: 22px;
+    font-weight: 600;
+    margin-bottom: 0;
+}
+#titular h1 {
+    font-size: 40px;
+    font-weight: 600;
+    margin-bottom: 0;
+}
+#titular h2, .textohome h2 {
+    font-size: 30px;
+    font-weight: 600;
+    margin-bottom: 0;
+}
+div#home {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-content: center;
+    justify-content: center;
+    align-items: stretch;
+}
+.fotohome {
+    background: url("fotohome.jpg");
+    width: 50%;
+    background-position: center center;
+    background-size: cover;
+}
+.textohome {
+    width: 50%;
+    padding: 50px;
+    background-color: #c2ab67;
+    color: white;
+}
+p {
+    margin-bottom: 0;
+    margin-top: 20px;
+    line-height: 22px;
+    font-size: 17px;
+    font-weight: 100;
+}
+ul.socialmedia {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-content: center;
+    justify-content: space-around;
+    align-items: center;
+    list-style: none;
+}
+#footerarriba .logo {
+    width: 70px;
+    height: auto;
+}
+div#footerarriba {
+    background-color: #465964;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-content: center;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 20px;
+}
+.socialmedia img {
+    width: 35px;
+}
+.redes, .footerlogo {
+    text-align: center;
+    width: 50%;
+}
+div#footerabajo {
+    background-color: black;
+    padding: 10px;
+    color: white;
+    text-align: center;
+    margin-bottom: 0;
+}
+div#footerabajo p {
+    font-size: 12px;
+}
+div#conocemain {
+    background-color: #d83d50;
+    margin-top: 0;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+    color: white;
+}
+.textoconoceuno {
+    background-color: #c2ab67;
+    width: 50%;
+    padding: 50px;
+    color: white;
+    justify-items: center;
+    display: grid;
+}
+.fotoconoceuno {
+    background: url("fotoconoceuno.jpg");
+    width: 50%;
+    background-position: center center;
+    background-size: cover;
+    min-width: 50%;
+}
+.textoconocedos {
+    background-color: #465964;
+    width: 50%;
+    padding: 50px;
+    color: white;
+    justify-items: center;
+    display: grid;
+}
+.textoconocetres {
+    background-color: #d83d50;
+    width: 50%;
+    padding: 50px;
+    color: white;
+    justify-items: center;
+    display: grid;
+}
+div#conoceuno, div#conocedos, div#conocetres {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-content: center;
+    justify-content: center;
+    align-items: stretch;
+}
+.fotoconocedos {
+    background: url("fotoconocedos.jpg");
+    width: 50%;
+    background-position: center center;
+    background-size: cover;
+    min-width: 50%;
+}
+.fotoconocetres {
+    background: url("fotoconocetres.jpg");
+    width: 50%;
+    background-position: center center;
+    background-size: cover;
+    min-width: 50%;
+}
+div#equiposmain {
+    background-color: #d83d50;
+    margin-top: 0;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+    color: white;
+}
+div#equipouno {
+    display: flex;
+    flex-direction: row;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+    background-color: #c2ab67;
+    color: white;
+    height: 400px;
+}
+.textoequipouno {
+    width: 80%;
+    height: 50%;
+}
+table#tablaequipos {
+    width: 100%;
+    text-align: center;
+}
+.textoinstalauno {
+    width: 50%;
+    padding: 15px;
+    display: grid;
+    justify-items: center;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+    background-color: #c2ab67;
+    color: white;
+}
+video {
+    width: 80%;
+}
+div#instalauno, div#instalados, div#instalatres {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-content: center;
+    justify-content: center;
+}
+div#fotoinstalauno {
+    width: 50%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+    background-color: #c2ab67;
+}
+div#fotoinstalados {
+    width: 50%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+    background-color: #465964;
+}
+.textoinstalados {
+    display: grid;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+    justify-items: center;
+    width: 50%;
+    padding: 15px;
+    background-color: #465964;
+    color: white;
+}
+.fotoinstalados {
+    width: 50%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+    background-color: #465964;
+}
+.textoinstalatres {
+    display: grid;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+    justify-items: center;
+    padding: 15px;
+    background-color: #d83d50;
+    width: 50%;
+}
+.fotoinstalatres {
+    width: 50%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+    background-color: #d83d50;
+}
+div#contactomain {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    background-color: #d83d50;
+}
+form {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    background-color: #c2ab67;
+    padding: 0px 0px 50px;
+}
+fieldset {
+    width: 40%;
+}
+div#cierrecontacto {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+    background-color: #d83d50;
+    color: white;
+}
+ul.opciones {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    list-style: none;
+}
+input#nombre {
+    width: 100%;
+}
+p.nombre {
+    display: flex;
+}
+input#fecha {
+    width: 71%;
+}
+p.fecha {
+    display: flex;
+}
+input#club {
+    width: 80.5%;
+}
+p.club {
+    display: flex;
+}
+input#year {
+    width: 84%;
+}
+p.year {
+    display: flex;
+}
+input#comp {
+    width: 77%;
+}
+p.comp {
+    display: flex;
+}
+input#position {
+    width: 100%;
+}
+p.position {
+    display: flex;
+}
+input#nombretutor {
+    width: 100%;
+}
+p.nombretutor {
+    display: flex;
+}
+input#telefono {
+    width: 100%;
+}
+p.telefono {
+    display: flex;
+}
+fieldset.enviar {
+    display: flex;
+    justify-content: center;
+    border: none;
+}
