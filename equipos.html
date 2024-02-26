@@ -116,7 +116,7 @@
 		<script>
 			function changeLanguage(language) {
 				
-				fetch(`languages/${language}-equipos.json`)
+				fetch(`${language}-equipos.json`)
 					.then(response => response.json())
 					.then(data => {
 						for (let id in data) {
