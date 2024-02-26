@@ -6,82 +6,87 @@
         <link rel="stylesheet" href="index.css"> 
     </head>
     <body>
+
         <div id="contactocompleto">
             <header class ="barramenu">
-                <div class="container">
+
                     <div class="header-logo">
                       <a href="index.html"><img class = "logo" src="logo.png" alt="E.F. Madrid" title="E.F. Madrid"></a>
                     </div>
-                </div>
+
                 <nav>
                  <ul class="menu">
-                    <li><a href="index.html">Inicio</a></li>
-                    <li><a href="conocenos.html">Conócenos</a></li>
-                    <li><a href="equipos.html">Equipos</a></li>
-                    <li><a href="instalaciones.html">Instalaciones</a></li>
-                    <li><a href="contacto.html">Contacto</a></li>
+                    <li><a id="menu1" href="index.html">Inicio</a></li>
+                    <li><a id="menu2" href="conocenos.html">Conócenos</a></li>
+                    <li><a id="menu3" href="equipos.html">Equipos</a></li>
+                    <li><a id="menu4" href="instalaciones.html">Instalaciones</a></li>
+                    <li><a id="menu5" href="contacto.html">Contacto</a></li>
                 </ul>
             </nav>
+				<ul id="language">
+					<li><img src="banderaesp.png" alt="Español" onclick="changeLanguage('es')"></li>
+					<li><img src="banderauk.png" alt="English" onclick="changeLanguage('en')"></li>
+				</ul>
             </header>
             <main>
                 <div id="contactomain">
-                    <h1>Contáctanos</h1>
-                    <h3>Cualquier duda que tengas, te la resolvemos</h3>
+                    <h1 id="contactoh1">Contáctanos</h1>
+                    <h3 id="contactoh3">Cualquier duda que tengas, te la resolvemos</h3>
                 </div>
                 <form action=""method="post">
-                    <h2>Formulario de contacto</h2>
+                    <h2 id="formularioh2">Formulario de contacto</h2>
                     <fieldset>
-                        <legend> Datos del jugador </legend>
+                        <legend id="parte1"> Datos del jugador </legend>
                         <p class="nombre">
-                            <label for="nombre">Nombre:</label><br>
+                            <label id="textnombre" for="nombre">Nombre:</label><br>
                             <input type="text" id="nombre" name="nombre">
                         </p>
                         <p class="fecha">
-                            <label for="fecha">Fecha de Nacimiento:</label><br>
+                            <label id="textfecha" for="fecha">Fecha de Nacimiento:</label><br>
                             <input type="text" id="fecha" name="fecha">
                         </p>
                         <p class="club">
-                            <label for="club">Último equipo:</label>
+                            <label id="textclub" for="club">Último equipo:</label>
                             <input type="text" id="club" name="club">
                         </p>
                         <p class="year">
-                            <label for="year">Último año:</label>
+                            <label id="textyear" for="year">Último año:</label>
                             <input type="text" id="year" name="year">
                         </p>
                         <p class="comp">
-                            <label for="comp">Última categoría:</label>
+                            <label id="textcomp" for="comp">Última categoría:</label>
                             <input type="text" id="comp" name="comp">
                         </p>
                         <p class="position">
-                            <label for="position">Posición:</label>
+                            <label id="textposition" for="position">Posición:</label>
                             <input type="text" id="position" name="position">
                         </p>
                     </fieldset>
                     <fieldset>
-                        <legend> Información solicitada</legend>
+                        <legend id="info"> Información solicitada</legend>
                             <p>
                                 <ul class="opciones">
                                  <li>
                                
-                                  <label for="temporada">Temporada</label>
+                                  <label id="temp" for="temporada">Temporada</label>
                                   <input type="checkbox" id="temporada" name="temporada">
                                  </li>
                                  <li>
                                  
-                                  <label for="entrenamientos">Sólo entrenamientos</label>
+                                  <label id="train" for="entrenamientos">Sólo entrenamientos</label>
                                   <input type="checkbox" id="entrenamientos" name="entrenamientos">
                                  </li>
                                 </ul>
                             </p>
                     </fieldset>
                     <fieldset>
-                        <legend>Datos del padre/madre/tutor</legend>
+                        <legend id="padres">Datos del padre/madre/tutor</legend>
                         <p class="nombretutor">
-                            <label for="nombretutor">Nombre:</label><br>
+                            <label id="textnombretutor" cfor="nombretutor">Nombre:</label><br>
                             <input type="text" id="nombretutor" name="nombretutor">
                         </p>
                         <p class="telefono">
-                            <label for="telefono">Teléfono:</label><br>
+                            <label id="texttelefono" for="telefono">Teléfono:</label><br>
                             <input type="text" id="position" name="position">
                         </p>
                     </fieldset>
@@ -90,8 +95,8 @@
                     </fieldset>
                 </form>
                 <div id="cierrecontacto">
-                    <h4>Rellena este formulario y ven a probar con nosotros.</h4>
-                    <h4>Primeras dos semanas de entrenamientos gratuitas</h4>
+                    <h4 id="cierreh1">Rellena este formulario y ven a probar con nosotros.</h4>
+                    <h4 id="cierreh4">Primeras dos semanas de entrenamientos gratuitas</h4>
                 </div>
             </main>
             <footer>
@@ -112,5 +117,39 @@
                 </div>
             </footer>
         </div>
+		<script>
+			function changeLanguage(language) {
+				
+				fetch(`languages/${language}-contacto.json`)
+					.then(response => response.json())
+					.then(data => {
+						for (let id in data) {
+							document.getElementById(id).innerText = data[id];
+						}
+					// Guardar el idioma seleccionado en localStorage
+					localStorage.setItem('language', language);
+					let idiomas = localStorage.getItem('language');
+					
+
+					})
+					.catch(error => console.error('Error:', error));
+			}
+			window.addEventListener('load', function() {
+			// Al cargar la página, seleccionar el idioma guardado en localStorage
+				//window.onload = function() {
+				if (typeof(Storage) !== "undefined") {
+					// El almacenamiento local está disponible
+				
+				let language = localStorage.getItem('language');
+				
+				if (language) {
+					changeLanguage(language);
+				}
+					} else {
+					// El almacenamiento local no está disponible
+						
+				}
+			});
+		</script>
     </body>
 </html>

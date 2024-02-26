@@ -6,37 +6,42 @@
         <link rel="stylesheet" href="index.css"> 
     </head>
     <body>
+
         <div id="instalcompleto">
             <header class ="barramenu">
-                <div class="container">
+
                     <div class="header-logo">
                       <a href="index.html"><img class = "logo" src="logo.png" alt="E.F. Madrid" title="E.F. Madrid"></a>
                     </div>
-                </div>
+
                 <nav>
                  <ul class="menu">
-                    <li><a href="index.html">Inicio</a></li>
-                    <li><a href="conocenos.html">Conócenos</a></li>
-                    <li><a href="equipos.html">Equipos</a></li>
-                    <li><a href="instalaciones.html">Instalaciones</a></li>
-                    <li><a href="contacto.html">Contacto</a></li>
+                    <li><a id="menu1" href="index.html">Inicio</a></li>
+                    <li><a id="menu2" href="conocenos.html">Conócenos</a></li>
+                    <li><a id="menu3" href="equipos.html">Equipos</a></li>
+                    <li><a id="menu4" href="instalaciones.html">Instalaciones</a></li>
+                    <li><a id="menu5" href="contacto.html">Contacto</a></li>
                 </ul>
             </nav>
+				<ul id="language">
+					<li><img src="banderaesp.png" alt="Español" onclick="changeLanguage('es')"></li>
+					<li><img src="banderauk.png" alt="English" onclick="changeLanguage('en')"></li>
+				</ul>
             </header>
             <main>
                 <div id="conocemain">
-                    <h1>Nuestras instalaciones</h1>
+                    <h1 id="instalah1">Nuestras instalaciones</h1>
                 </div>
                 <div id="instalauno">
                     <div class="textoinstalauno">
-                        <h2>Futbol 11</h2>
-                        <p>En las instalaciones de E.F.Madrid, contamos con hasta 3 campos distintos de fútbol 11. Todos ellos homologados por la RFFM</p>
+                        <h2 id="instalaunoh2">Futbol 11</h2>
+                        <p id="instalaunop1">En las instalaciones de E.F.Madrid, contamos con hasta 3 campos distintos de fútbol 11. Todos ellos homologados por la RFFM</p>
 
-                        <p>Estos son los campos en los que nuestros equipos Alevines, Infantiles, Cadetes, Juveniles y Senior realizan sus entrenamientos y después juegan sus partidos como locales en las competiciones correspondientes</p>
+                        <p id="instalaunop2">Estos son los campos en los que nuestros equipos Alevines, Infantiles, Cadetes, Juveniles y Senior realizan sus entrenamientos y después juegan sus partidos como locales en las competiciones correspondientes</p>
 
-                        <p>Todos estos campos están provistos de fuentes, aseos, gradas y además disponen de múltiples accesos para personas con movilidad reducida</p>
+                        <p id="instalaunop3">Todos estos campos están provistos de fuentes, aseos, gradas y además disponen de múltiples accesos para personas con movilidad reducida</p>
 
-                        <p>Cuentan además con césped artificial de última generación para que la práctica del deporte sea lo más cómoda posible</p>
+                        <p id="instalaunop4">Cuentan además con césped artificial de última generación para que la práctica del deporte sea lo más cómoda posible</p>
                         
                     </div>
                     <div id="fotoinstalauno">
@@ -48,29 +53,29 @@
                         <iframe width="560" height="315" src="https://www.youtube.com/embed/80ge8mieDNI?si=M-yoyaqpYUEkEJQp" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
                     </div>
                     <div class="textoinstalados">
-                        <h2>Fútbol 7</h2>
-                        <p>Nuestros jugadores Prebenjamines, Benjamines y Alevines disponen de hasta 4 campos distintos de fútbol 7.</p>
+                        <h2 id="instaladosh2">Fútbol 7</h2>
+                        <p id="instaladosp1">Nuestros jugadores Prebenjamines, Benjamines y Alevines disponen de hasta 4 campos distintos de fútbol 7.</p>
 
-                        <p>Además, tenemos el orgullo de ser sede de las competiciones organizadas por la federación, por lo que todos los partidos se jugarán en estos campos</p>
+                        <p id="instaladosp2">Además, tenemos el orgullo de ser sede de las competiciones organizadas por la federación, por lo que todos los partidos se jugarán en estos campos</p>
                             
-                        <p>Disponemos de todo tipo de comodidades tanto para padres como para jugadores, para que las horas que pasen en la Escuela sean lo más placenteras posibles</p>
+                        <p id="instaladosp3">Disponemos de todo tipo de comodidades tanto para padres como para jugadores, para que las horas que pasen en la Escuela sean lo más placenteras posibles</p>
                             
-                        <p>También es césped de última generación, con sistema de riego y drenaje incorporado, para eliminar charcos rápidamente en los días de lluvia y evitar quemaduras en los días de calor</p>
+                        <p id="instaladosp4">También es césped de última generación, con sistema de riego y drenaje incorporado, para eliminar charcos rápidamente en los días de lluvia y evitar quemaduras en los días de calor</p>
                             
-                        <p>Como novedad, contamos que dentro de poco abriremos más equipos de fútbol 7 de categorías superiores, y pondremos los campos a disposición de todos los que quieran alquilarlo.
+                        <p id="instaladosp5">Como novedad, contamos que dentro de poco abriremos más equipos de fútbol 7 de categorías superiores, y pondremos los campos a disposición de todos los que quieran alquilarlo.
                         </p>
                     </div>
                 </div>
                 <div id="instalatres">
                     <div class="textoinstalatres">
-                        <h2>Fútbol 5</h2>
-                        <p>Para los más pequeños de la Escuela, tenemos dos campos de fútbol 5 en los que darán sus primeros pasos en el deporte</p>
+                        <h2 id="instalatresh2">Fútbol 5</h2>
+                        <p id="instalatresp1">Para los más pequeños de la Escuela, tenemos dos campos de fútbol 5 en los que darán sus primeros pasos en el deporte</p>
 
-                        <p>Estos campos están completamente preparados para que los pequeños entrenen y jueguen sus partidos cada fin de semana. Desde el césped hasta los banquillos o las porterías, todo cuenta con las medidas de seguridad necesarias para protegerles en todo momento</p>
+                        <p id="instalatresp2">Estos campos están completamente preparados para que los pequeños entrenen y jueguen sus partidos cada fin de semana. Desde el césped hasta los banquillos o las porterías, todo cuenta con las medidas de seguridad necesarias para protegerles en todo momento</p>
                             
-                        <p>También tienen sistemas de riego y drenaje para evitar cualquier tipo de problema por las condiciones climatológicas</p>
+                        <p id="instalatresp3">También tienen sistemas de riego y drenaje para evitar cualquier tipo de problema por las condiciones climatológicas</p>
                             
-                        <p>Estos campos no se podrán usar fuera de las horas de entrenamientos, ya que pueden ocuparlos los distintos equipos de la Escuela para trabajos extra, antes o después de los entrenamientos</p>
+                        <p id="instalatresp4">Estos campos no se podrán usar fuera de las horas de entrenamientos, ya que pueden ocuparlos los distintos equipos de la Escuela para trabajos extra, antes o después de los entrenamientos</p>
                     </div>
                     <div class="fotoinstalatres">
                         <iframe width="560" height="315" src="https://www.youtube.com/embed/AicBCOxzDVk?si=89UgThrxRZsxTlMp" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
@@ -95,5 +100,40 @@
                 </div>
             </footer>
         </div>
+
+		 <script>
+			function changeLanguage(language) {
+				
+				fetch(`languages/${language}-instalaciones.json`)
+					.then(response => response.json())
+					.then(data => {
+						for (let id in data) {
+							document.getElementById(id).innerText = data[id];
+						}
+					// Guardar el idioma seleccionado en localStorage
+					localStorage.setItem('language', language);
+					let idiomas = localStorage.getItem('language');
+					
+
+					})
+					.catch(error => console.error('Error:', error));
+			}
+			window.addEventListener('load', function() {
+			// Al cargar la página, seleccionar el idioma guardado en localStorage
+				//window.onload = function() {
+				if (typeof(Storage) !== "undefined") {
+					// El almacenamiento local está disponible
+				
+				let language = localStorage.getItem('language');
+				
+				if (language) {
+					changeLanguage(language);
+				}
+					} else {
+					// El almacenamiento local no está disponible
+						
+				}
+			});
+		</script>
     </body>
 </html>

@@ -6,84 +6,89 @@
         <link rel="stylesheet" href="index.css"> 
     </head>
     <body>
+
         <div id="equipocompleto">
             <header class ="barramenu">
-                <div class="container">
+
                     <div class="header-logo">
                       <a href="index.html"><img class = "logo" src="logo.png" alt="E.F. Madrid" title="E.F. Madrid"></a>
                     </div>
-                </div>
+
                 <nav>
                  <ul class="menu">
-                    <li><a href="index.html">Inicio</a></li>
-                    <li><a href="conocenos.html">Conócenos</a></li>
-                    <li><a href="equipos.html">Equipos</a></li>
-                    <li><a href="instalaciones.html">Instalaciones</a></li>
-                    <li><a href="contacto.html">Contacto</a></li>
+                    <li><a id="menu1" href="index.html">Inicio</a></li>
+                    <li><a id="menu2" href="conocenos.html">Conócenos</a></li>
+                    <li><a id="menu3" href="equipos.html">Equipos</a></li>
+                    <li><a id="menu4" href="instalaciones.html">Instalaciones</a></li>
+                    <li><a id="menu5" href="contacto.html">Contacto</a></li>
                 </ul>
             </nav>
+				<ul id="language">
+					<li><img src="banderaesp.png" alt="Español" onclick="changeLanguage('es')"></li>
+					<li><img src="banderauk.png" alt="English" onclick="changeLanguage('en')"></li>
+				</ul>
             </header>
             <main>
                 <div id="equiposmain">
-                    <h1>Equipos</h1>
-                    <h3>En E.F.Madrid tenemos el equipo perfecto para ti</h3>
+                    <h1 id="equiposh1">Equipos</h1>
+                    <h3 id="equiposh3">En E.F.Madrid tenemos el equipo perfecto para ti</h3>
                 </div>
                 <div id="equipouno">
                     <div class="textoequipouno">
                         <table id ="tablaequipos" border="3">
                             <tr>
-                              <th>Categoría</th>
-                              <th>Año de nacimiento</th>
-                              <th>Horarios</th>
-                              <th>Partidos</th>
+                              <th id="columna1">Categoría</th>
+                              <th id="columna2">Año de nacimiento</th>
+                              <th id="columna3">Horarios</th>
+                              <th id="columna4">Partidos</th>
                             </tr>
                             <tr>
-                              <td>Chupetín</td>
-                              <td>2018 en adelante</td>
-                              <td>L-X 17:30-19:00</td>
-                              <td>Domingos 9:00-12:00</td>
+                              <td id="f1c1">Chupetín</td>
+                              <td id="f1c2">2018 en adelante</td>
+                              <td id="f1c3">L-X 17:30-19:00</td>
+                              <td id="f1c4">Domingos 9:00-12:00</td>
                             </tr>
                             <tr>
-                              <td>Prebenjamín</td>
-                              <td>2016 - 2017</td>
-                              <td>L-X 17:30-19:00</td>
-                              <td>Viernes 18:00-20:30</td>
+                              <td id="f2c1">Prebenjamín</td>
+                              <td id="f2c2">2016 - 2017</td>
+                              <td id="f2c3">L-X 17:30-19:00</td>
+                              <td id="f2c4">Viernes 18:00-20:30</td>
                             </tr>
                             <tr>
-                              <td>Benjamín</td>
-                              <td>2014 - 2015</td>
-                              <td>M-J 17:30-19:00</td>
-                              <td>Sábados 9:00-12:00</td>
+                              <td id="f3c1">Benjamín</td>
+                              <td id="f3c2">2014 - 2015</td>
+                              <td id="f3c3">M-J 17:30-19:00</td>
+                              <td id="f3c4">Sábados 9:00-12:00</td>
                             </tr>
                             <tr>
-                              <td>Alevín</td>
-                              <td>2012 - 2013</td>
-                              <td>M-J 17:30-19:00</td>
-                              <td>Sábados 10:00 (Local)</td>
+                              <td id="f4c1">Alevín</td>
+                              <td id="f4c2">2012 - 2013</td>
+                              <td id="f4c3">M-J 17:30-19:00</td>
+                              <td id="f4c4">Sábados 10:00 (Local)</td>
                             </tr>
                             <tr>
-                              <td>Infantil</td>
-                              <td>2010 - 2011</td>
-                              <td>L-X 19:00-20:30</td>
-                              <td>Sábados 12:00 (Local)</td>
+                              <td id="f5c1">Infantil</td>
+                              <td id="f5c2">2010 - 2011</td>
+                              <td id="f5c3">L-X 19:00-20:30</td>
+                              <td id="f5c4">Sábados 12:00 (Local)</td>
                             </tr>
                             <tr>
-                              <td>Cadete</td>
-                              <td>2008 - 2009</td>
-                              <td>M-J 19:00-20:30</td>
-                              <td>Sábados 16:00 (Local)</td>
+                              <td id="f6c1">Cadete</td>
+                              <td id="f6c2">2008 - 2009</td>
+                              <td id="f6c3">M-J 19:00-20:30</td>
+                              <td id="f6c4">Sábados 16:00 (Local)</td>
                             </tr>
                             <tr>
-                              <td>Juvenil</td>
-                              <td>2005 - 2006 - 2007</td>
-                              <td>L-X 20:30-22:30 V 17:30-19:30</td>
-                              <td>Domingos 10:00 (Local)</td>
+                              <td id="f7c1">Juvenil</td>
+                              <td id="f7c2">2005 - 2006 - 2007</td>
+                              <td id="f7c3">L-X 20:30-22:30 V 17:30-19:30</td>
+                              <td id="f7c4">Domingos 10:00 (Local)</td>
                             </tr>
                             <tr>
-                              <td>Senior</td>
-                              <td>2004 y anteriores</td>
-                              <td>M-J 20:30-22:30 V 19:30-21:30</td>
-                              <td>Domingos 12:00 (Local)</td>
+                              <td id="f8c1">Senior</td>
+                              <td id="f8c2">2004 y anteriores</td>
+                              <td id="f8c3">M-J 20:30-22:30 V 19:30-21:30</td>
+                              <td id="f8c4">Domingos 12:00 (Local)</td>
                             </tr>
                           </table>
                         </div>
@@ -107,5 +112,40 @@
                 </div>
             </footer>
         </div>
+
+		<script>
+			function changeLanguage(language) {
+				
+				fetch(`languages/${language}-equipos.json`)
+					.then(response => response.json())
+					.then(data => {
+						for (let id in data) {
+							document.getElementById(id).innerText = data[id];
+						}
+					// Guardar el idioma seleccionado en localStorage
+					localStorage.setItem('language', language);
+					let idiomas = localStorage.getItem('language');
+					
+
+					})
+					.catch(error => console.error('Error:', error));
+			}
+			window.addEventListener('load', function() {
+			// Al cargar la página, seleccionar el idioma guardado en localStorage
+				//window.onload = function() {
+				if (typeof(Storage) !== "undefined") {
+					// El almacenamiento local está disponible
+				
+				let language = localStorage.getItem('language');
+				
+				if (language) {
+					changeLanguage(language);
+				}
+					} else {
+					// El almacenamiento local no está disponible
+						
+				}
+			});
+		</script>
     </body>
 </html>

@@ -3,42 +3,50 @@
         <head>
           <title>E.F.Madrid</title>
           <meta charset="utf-8">
-          <link rel="stylesheet" href="index.css"> 
+          <link rel="stylesheet" href="index.css">
+          
         </head>
     <body>
+
         <div id="completo">
             <header class ="barramenu">
-                <div class="container">
+
+
                     <div class="header-logo">
                       <a href="index.html"><img class = "logo" src="logo.png" alt="E.F. Madrid" title="E.F. Madrid"></a>
                     </div>
-                </div>
+
                 <nav>
-                 <ul class="menu">
-                    <li><a href="index.html">Inicio</a></li>
-                    <li><a href="conocenos.html">Conócenos</a></li>
-                    <li><a href="equipos.html">Equipos</a></li>
-                    <li><a href="instalaciones.html">Instalaciones</a></li>
-                    <li><a href="contacto.html">Contacto</a></li>
+                 <ul class="menu" id="menu">
+                    <li><a id="menu1" href="index.html">Inicio</a></li>
+                    <li><a id="menu2" href="conocenos.html">Conócenos</a></li>
+                    <li><a id="menu3" href="equipos.html">Equipos</a></li>
+                    <li><a id="menu4" href="instalaciones.html">Instalaciones</a></li>
+                    <li><a id="menu5" href="contacto.html">Contacto</a></li>
                 </ul>
-            </nav>
+
+                </nav>
+				<ul id="language">
+					<li><img src="banderaesp.png" alt="Español" onclick="changeLanguage('es')"></li>
+					<li><img src="banderauk.png" alt="English" onclick="changeLanguage('en')"></li>
+				</ul>
             </header>
             <main>
                 <div id="titular">
-                    <h3>Fundado en 2020</h3>
+                    <h3 id="titularh3">Fundado en 2020</h3>
                     <h1>E.F.MADRID</h1>
-                    <h2>Aprende con nosotros el verdadero fútbol</h2>
+                    <h2 id="titularh2">Aprende con nosotros el verdadero fútbol</h2>
                 </div>
                 <div id="home">
                     <div class="fotohome"></div>
-                    <div class="textohome">
-                        <h2>¡Bienvenidos a E.F.Madrid!</h2>
-                        <p>Estamos emocionados de darles la bienvenida a nuestra nueva casa del fútbol en el corazón de Madrid.</p>
-                        <p>En nuestra escuela, no solo nos dedicamos a enseñar las habilidades técnicas y tácticas del deporte, sino que también nos esforzamos por inculcar valores como el trabajo en equipo, la disciplina y el respeto dentro y fuera del campo.</p>
-                        <p>Nuestro equipo de entrenadores altamente cualificados está aquí para guiar y apoyar a cada jugador en su viaje futbolístico. Ya sea que estén aquí para divertirse, mejorar sus habilidades o perseguir el sueño de convertirse en profesionales, nuestra escuela está diseñada para brindarles las herramientas y el ambiente adecuados para alcanzar sus metas.</p>
-                        <p>En la E.F. Madrid, celebramos la diversidad y la inclusión. Estamos comprometidos a ofrecer una experiencia en la que todos los jugadores se sientan valorados y respetados, independientemente de su habilidad o experiencia previa en el deporte.</p>
-                        <p>Nos enorgullece ser parte de la rica tradición futbolística de Madrid y estamos ansiosos por ver crecer y prosperar a cada uno de nuestros jugadores mientras se sumergen en la pasión y la emoción del hermoso juego.</p>
-                        <p>¡Bienvenidos a la familia E.F. Madrid! Juntos, ¡vamos a conquistar el mundo del fútbol!</p>
+                    <div class="textohome" id="textohome">
+                        <h2 id="textohomeh2">¡Bienvenidos a E.F.Madrid!</h2>
+                        <p id="textohomep1">Estamos emocionados de darles la bienvenida a nuestra nueva casa del fútbol en el corazón de Madrid.</p>
+                        <p id="textohomep2">En nuestra escuela, no solo nos dedicamos a enseñar las habilidades técnicas y tácticas del deporte, sino que también nos esforzamos por inculcar valores como el trabajo en equipo, la disciplina y el respeto dentro y fuera del campo.</p>
+                        <p id="textohomep3">Nuestro equipo de entrenadores altamente cualificados está aquí para guiar y apoyar a cada jugador en su viaje futbolístico. Ya sea que estén aquí para divertirse, mejorar sus habilidades o perseguir el sueño de convertirse en profesionales, nuestra escuela está diseñada para brindarles las herramientas y el ambiente adecuados para alcanzar sus metas.</p>
+                        <p id="textohomep4">En la E.F. Madrid, celebramos la diversidad y la inclusión. Estamos comprometidos a ofrecer una experiencia en la que todos los jugadores se sientan valorados y respetados, independientemente de su habilidad o experiencia previa en el deporte.</p>
+                        <p id="textohomep5">Nos enorgullece ser parte de la rica tradición futbolística de Madrid y estamos ansiosos por ver crecer y prosperar a cada uno de nuestros jugadores mientras se sumergen en la pasión y la emoción del hermoso juego.</p>
+                        <p id="textohomep6">¡Bienvenidos a la familia E.F. Madrid! Juntos, ¡vamos a conquistar el mundo del fútbol!</p>
                     </div>
                 </div>
             </main>
@@ -60,6 +68,40 @@
                 </div>
             </footer>
         </div>
-        
+
+		 <script>
+			function changeLanguage(language) {
+				
+				fetch(`languages/${language}-index.json`)
+					.then(response => response.json())
+					.then(data => {
+						for (let id in data) {
+							document.getElementById(id).innerText = data[id];
+						}
+					// Guardar el idioma seleccionado en localStorage
+					localStorage.setItem('language', language);
+					let idiomas = localStorage.getItem('language');
+					
+
+					})
+					.catch(error => console.error('Error:', error));
+			}
+			window.addEventListener('load', function() {
+			// Al cargar la página, seleccionar el idioma guardado en localStorage
+				//window.onload = function() {
+				if (typeof(Storage) !== "undefined") {
+					// El almacenamiento local está disponible
+				
+				let language = localStorage.getItem('language');
+				
+				if (language) {
+					changeLanguage(language);
+				}
+					} else {
+					// El almacenamiento local no está disponible
+						
+				}
+			});
+		</script>
     </body>
 </html>
